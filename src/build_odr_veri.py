@@ -1,3 +1,4 @@
+# ÖDR .docx'ten çıkarılan tables.json (tüm tablolar) ve kanitlar.json (Birleşik Kanıt Dizini) dosyalarından src/odr-veri.js üretir.
 import json,re
 T=json.load(open('tables.json')); K=json.load(open('kanitlar.json'))
 def rows(i): return T[str(i)][1:]
@@ -38,7 +39,7 @@ for k,v in K.items(): kanit.setdefault(k.split('.')[2],[]).append({'kod':k,'ad':
 for o in kanit: kanit[o].sort(key=lambda z:int(z['kod'].split('.')[3]))
 out={'PC':pc,'PEA':pea,'APG':apg,'PEA_PC':pea_pc,'PEA_DERS':pea_ders,'MUFREDAT':mufredat,'HAVUZ':havuz,'DERS_PC':mat,'DIS_PAYDAS_DERS':dispaydas,'POC_DERSLER':poc_dersler,'MEKANIZMA':mekanizma,'DONGU_ORNEK':dongu,'DANISMA_KURULU':dk,'KANIT':kanit}
 js="/* ÖDR 2026 (30.06.2026, MEDEK'e sunulan nihai rapor) kaynaklı veriler — build_odr_veri.py ile üretildi. */\nwindow.ODR = "+json.dumps(out,ensure_ascii=False,indent=1)+";\n"
-open('/home/claude/eticaretvepazarlama/src/odr-veri.js','w').write(js)
+open('odr-veri.js','w').write(js)
 tot=sum(d['akts'] for d in mufredat); print('mufredat',len(mufredat),'akts',tot,'havuz',len(havuz),'mat',len(mat),'kanit',sum(len(v) for v in kanit.values()))
 print('no matrix:',[d['kod'] for d in mufredat+havuz if d.get('kod') and d['kod'] not in mat])
 print(pea_ders.keys())
