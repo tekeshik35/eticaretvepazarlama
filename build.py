@@ -15,7 +15,7 @@ def kucult(kod):
     return r.stdout if r.returncode == 0 and r.stdout.strip() else kod
 jsx = subprocess.run(f'{babel} --presets @babel/preset-react --no-babelrc "{k/"src/moduller.jsx"}"', shell=True, capture_output=True, text=True)
 if jsx.returncode: sys.exit(jsx.stderr)
-veri = (k/"src/odr-veri.js").read_text(encoding="utf-8")
+veri = (k/"src/odr-veri.js").read_text(encoding="utf-8") + "\n" + (k/"src/katalog-2026.js").read_text(encoding="utf-8")
 app = (k/"src/app.js").read_text(encoding="utf-8")
 shell = (k/"src/shell.html").read_text(encoding="utf-8")
 jsx_kod = kucult(jsx.stdout)

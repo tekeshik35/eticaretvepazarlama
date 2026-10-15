@@ -8610,7 +8610,7 @@ function AppKapsayici() {
             /*#__PURE__*/ React.createElement(
               "div",
               { className: "text-xs text-slate-500" },
-              "Google hesab\u0131n\u0131zla giri\u015F yap\u0131n. Paydaşlarımız (öğrenci, mezun, sektör temsilcisi) giriş yaparak görüş bildirebilir.",
+              "Google hesab\u0131n\u0131zla giri\u015F yap\u0131n. Öğrenciler ve paydaşlar giriş yaparak öğretim planını görebilir ve görüş bildirebilir.",
             ),
           ),
           /*#__PURE__*/ React.createElement(
@@ -11149,7 +11149,6 @@ function MedekPanel({ kullanici, duzenlemeYetkisi, cikisYap }) {
         [
           { id: "dashboard", ad: "Özet", icon: LayoutDashboard },
           { id: "kimlik", ad: "Program Kimliği", icon: Target },
-          { id: "olcutler2", ad: "Ölçütler", icon: ClipboardList },
           { id: "ogretim", ad: "Öğretim Planı", icon: FileText },
           { id: "apg", ad: "APG ve PÇ Ulaşma", icon: TrendingUp },
           { id: "paydaslar", ad: "Paydaşlar", icon: Users },
@@ -11200,10 +11199,10 @@ function MedekPanel({ kullanici, duzenlemeYetkisi, cikisYap }) {
       // ÖDR 2026 / Yönetim Planı uyum modülleri (src/moduller.jsx)
       aktifSekme === "dashboard" &&
         React.createElement(OzetSekmesiODR, { duzenlemeYetkisi, setAktifSekme }),
-      aktifSekme === "kimlik" && React.createElement(KimlikSekmesi, null),
-      aktifSekme === "olcutler2" &&
-        React.createElement(OlcutlerSekmesiODR, { duzenlemeYetkisi }),
-      aktifSekme === "ogretim" && React.createElement(OgretimPlaniSekmesiODR, null),
+      duzenlemeYetkisi && React.createElement(PublicSenkron, null),
+      aktifSekme === "kimlik" && React.createElement(KimlikSekmesi, { duzenlemeYetkisi }),
+      aktifSekme === "ogretim" &&
+        React.createElement(OgretimPlaniSekmesiODR, { duzenlemeYetkisi }),
       aktifSekme === "apg" && React.createElement(ApgSekmesi, { duzenlemeYetkisi }),
       aktifSekme === "dongu" &&
         React.createElement(DonguSekmesi, { duzenlemeYetkisi, setAktifSekme }),
@@ -22025,7 +22024,7 @@ function MedekPanel({ kullanici, duzenlemeYetkisi, cikisYap }) {
             /*#__PURE__*/ React.createElement(
               "div",
               { className: "divide-y divide-slate-800" },
-              [{ id: "dashboard", ad: "Özet" }, { id: "kimlik", ad: "Program Kimliği" }, { id: "olcutler2", ad: "Ölçütler" }, { id: "ogretim", ad: "Öğretim Planı" }, { id: "apg", ad: "APG ve PÇ Ulaşma" }, { id: "paydaslar", ad: "Paydaşlar" }, { id: "protokoller", ad: "Sektör Protokolleri" }, { id: "toplantilar", ad: "Toplantılar" }, { id: "anketler", ad: "Anketler" }, { id: "gorusler", ad: "Görüşler" }, { id: "dongu", ad: "İyileştirme Döngüsü" }, { id: "eylem", ad: "Eylem" }, { id: "takvim", ad: "İş Takvimi" }, { id: "rapor", ad: "Yıllık Rapor" }, { id: "gorus_bildir", ad: "Görüş Bildir" }, { id: "notlar", ad: "Notlar" }].map((s) =>
+              [{ id: "dashboard", ad: "Özet" }, { id: "kimlik", ad: "Program Kimliği" }, { id: "ogretim", ad: "Öğretim Planı" }, { id: "apg", ad: "APG ve PÇ Ulaşma" }, { id: "paydaslar", ad: "Paydaşlar" }, { id: "protokoller", ad: "Sektör Protokolleri" }, { id: "toplantilar", ad: "Toplantılar" }, { id: "anketler", ad: "Anketler" }, { id: "gorusler", ad: "Görüşler" }, { id: "dongu", ad: "İyileştirme Döngüsü" }, { id: "eylem", ad: "Eylem" }, { id: "takvim", ad: "İş Takvimi" }, { id: "rapor", ad: "Yıllık Rapor" }, { id: "gorus_bildir", ad: "Görüş Bildir" }, { id: "notlar", ad: "Notlar" }].map((s) =>
                 /*#__PURE__*/ React.createElement(
                   "div",
                   {
@@ -22107,7 +22106,7 @@ function MedekPanel({ kullanici, duzenlemeYetkisi, cikisYap }) {
                   {
                     onClick: () =>
                       setGizliSekmeler(
-                        [{ id: "dashboard", ad: "Özet" }, { id: "kimlik", ad: "Program Kimliği" }, { id: "olcutler2", ad: "Ölçütler" }, { id: "ogretim", ad: "Öğretim Planı" }, { id: "apg", ad: "APG ve PÇ Ulaşma" }, { id: "paydaslar", ad: "Paydaşlar" }, { id: "protokoller", ad: "Sektör Protokolleri" }, { id: "toplantilar", ad: "Toplantılar" }, { id: "anketler", ad: "Anketler" }, { id: "gorusler", ad: "Görüşler" }, { id: "dongu", ad: "İyileştirme Döngüsü" }, { id: "eylem", ad: "Eylem" }, { id: "takvim", ad: "İş Takvimi" }, { id: "rapor", ad: "Yıllık Rapor" }, { id: "gorus_bildir", ad: "Görüş Bildir" }, { id: "notlar", ad: "Notlar" }].map((s) => s.id),
+                        [{ id: "dashboard", ad: "Özet" }, { id: "kimlik", ad: "Program Kimliği" }, { id: "ogretim", ad: "Öğretim Planı" }, { id: "apg", ad: "APG ve PÇ Ulaşma" }, { id: "paydaslar", ad: "Paydaşlar" }, { id: "protokoller", ad: "Sektör Protokolleri" }, { id: "toplantilar", ad: "Toplantılar" }, { id: "anketler", ad: "Anketler" }, { id: "gorusler", ad: "Görüşler" }, { id: "dongu", ad: "İyileştirme Döngüsü" }, { id: "eylem", ad: "Eylem" }, { id: "takvim", ad: "İş Takvimi" }, { id: "rapor", ad: "Yıllık Rapor" }, { id: "gorus_bildir", ad: "Görüş Bildir" }, { id: "notlar", ad: "Notlar" }].map((s) => s.id),
                       ),
                     className:
                       "text-xs px-3 py-1.5 border border-rose-800 hover:border-rose-700 hover:bg-rose-950/30 text-rose-400 rounded",
@@ -23739,7 +23738,7 @@ function MedekPanel({ kullanici, duzenlemeYetkisi, cikisYap }) {
         /*#__PURE__*/ React.createElement(
           "div",
           { className: "font-mono" },
-          "MEDEK \xD6nlisans Program \xD6l\xE7\xFCtleri v1.1 \xB7 \xD6DR 2026 (30.06.2026) \xB7 S\xFCrd\xFCr\xFClebilir Y\xF6netim Plan\u0131 (BK 2026/04)",
+          "Program S\xFCrd\xFCr\xFClebilir Y\xF6netim Plan\u0131 (BK 12.06.2026, 2026/04) \xB7 MEDEK \xD6nlisans Program \xD6l\xE7\xFCtleri v1.1",
         ),
       ),
     ),

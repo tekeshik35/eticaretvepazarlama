@@ -1,49 +1,82 @@
-# Panel v2.0 — ÖDR 2026 ve Sürdürülebilir Yönetim Planı uyumu (15.10.2026)
+# Panel v2.1 — Program Sürdürülebilir Yönetim Paneli
 
-Panel, MEDEK'e sunulan ÖDR'de (30.06.2026; ET.K.2.18 ve ET.K.4.9) "Dijital Sürekli
-İyileştirme Paneli" olarak gösterilmiştir. Bu sürümde panel, rapora ve Program
-Sürdürülebilir Yönetim Planı'na (BK 12.06.2026, 2026/04) göre sadeleştirildi.
-Sadece gereken kısımlar eklendi.
+Panel, raporun özeti olarak değil, **Program Sürdürülebilir Yönetim Planı'nın**
+(BK 12.06.2026, 2026/04) uygulandığı çalışma aracı olarak kurgulandı. Plandaki
+PUKÖ döngüsünün her adımına bir ekran karşılık gelir:
 
-## Değişenler
+| Plan | Panelde |
+|---|---|
+| §6 Misyon, vizyon, PEA, PÇ'nin belirlenmesi ve güncellenmesi | **Program Kimliği:** düzenlenebilir. Her değişiklik kurul kararıyla kaydedilir, önceki sürüm arşive alınır. |
+| §7 Öğretim planının güncellenmesi | **Öğretim Planı:** yarıyıllar, seçmeli havuzları ve Ders–PÇ matrisi düzenlenebilir. "Yeni sürüm başlat" ile eski plan arşivlenir. |
+| §8 APG | **APG ve PÇ Ulaşma:** APG tanımları Program Kimliği'nden gelir; sonuçlar yıllık girilir. Sapma ve "2 yıl üst üste sapma" tetikleyicisi gösterilir. |
+| §10 PÇ ulaşma | **APG ve PÇ Ulaşma:** dönemlik PÇ ulaşma yüzdeleri. |
+| §5 Paydaş katılımı | Paydaşlar, Toplantılar, Anketler, Görüşler sekmeleri ve öğrenci/paydaş sayfası. |
+| §9 PUKÖ, kapalı döngü | **İyileştirme Döngüsü:** talep → karar → eylem → kanıt. Ayrıca **Eylem**. |
+| §11 Yıllık iş takvimi | **İş Takvimi** |
+| §9 Yıllık rapor | **Yıllık Rapor:** paneldeki verilerden derlenir, Word olarak indirilir. |
 
-| Sekme | Ne oldu | Dayanak |
-|---|---|---|
-| Özet | Baştan yazıldı. Akreditasyon durumu, bu ayın takvim işleri, ÖDR'deki öğretim planına göre MEDEK sayısal şartları (132 AKTS), 9 ölçüt, APG özeti. "Müfredat Reform Modülü" ve eski 8 ölçüt kaldırıldı. | ÖDR, Plan §9 |
-| Program Kimliği (yeni) | Misyon, vizyon, PEA-1…4, PÇ1–PÇ14 ve PEA ilişkisi, APG tanım kartları. | ÖDR 2.1–2.6, 3.1; BKK 2026/04 |
-| Ölçütler | MEDEK v1.1'in 9 ölçütü ve ÖDR alt başlıkları. 2024 puanları, 2024 gözlemi ve alınan önlem. 187 kanıt Drive bağlantılarıyla, aranabilir. Ölçüt başına kurum ziyareti notu. | ÖDR Birleşik Kanıt Dizini |
-| Öğretim Planı | ÖDR'deki 2026 planı: 4 yarıyıl, seçmeli havuzları, Ders–PÇ matrisi (1–5). Eski "reform senaryoları" ekranları menüden kaldırıldı. | ÖDR 5.1–5.4 |
-| APG ve PÇ Ulaşma (yeni) | Yıllık APG girişi; ilk yıl referans, sonra hedefle karşılaştırma ve "2 yıl üst üste sapma" uyarısı. Dönemlik PÇ1–14 ulaşma (%). 2025-2026 referans değerleri ET.K.2.21'den hazır yüklendi. | Plan §8, §10 |
-| İyileştirme Döngüsü (yeni) | Girdi → karar → eylem → çıktı → kanıt zinciri. Döngüye bağlanmamış görüşler listelenir, "Eylem planına ekle" düğmesi var. ÖDR Tablo 4.2.2'deki 6 kapalı döngü hazır yüklendi. | Plan §9, ÖDR 4.2 |
-| İş Takvimi (yeni) | Plandaki yıllık iş takvimi ve periyodik işler (16 iş). Yapıldı/ertelendi, tarih ve kanıt işaretlenir; geciken işler Özet'te görünür. | Plan §11 (§5, §7, §9, §10, §12) |
-| Yıllık Rapor (yeni) | Paneldeki verilerden otomatik derlenen yıllık değerlendirme raporu; Word olarak indirilir. | Plan §9 |
-| Paydaş Portalı (yeni) | Panel yetkisi olmayan ama Google ile giriş yapan kullanıcılar program kimliğini görür ve görüş gönderir. Görüntüleyiciler için "Görüş Bildir" sekmesi var. Yönetici gelen görüşleri Görüşler sekmesinden aktarır. | ÖDR 1.11, 2.7, 4.2 |
-| Paydaş Konuları | Menüden kaldırıldı (2024 eski numaralandırmalı kontrol listesiydi). | — |
+**Özet** sekmesi artık bir yönetim panosudur. İçinde şunlar var:
 
-Değişmeyen sekmeler: Paydaşlar, Sektör Protokolleri, Toplantılar, Anketler,
-Görüşler, Eylem, Kullanıcılar, Notlar.
+- Bu yılın PUKÖ ilerlemesi
+- Bu ay yapılacak ve geciken işler
+- Paydaş katılımı
+- Açık iyileştirme kayıtları
+- APG durumu
+- Güncel öğretim planından hesaplanan MEDEK şartları
 
-**Veri güvenliği.** Firestore'daki mevcut veriye dokunulmadı. Yeni modüller yeni
-alanlara yazar: `apgSonuclari_v1`, `pcUlasma_v1`, `iyilestirmeDongusu_v1`,
-`takvimDurum_v1`, `yillikRaporMetinleri_v1`, `olcutNotlari_v1` ve
-`kurumZiyaretiTarihi`. Eski müfredat ve matris verileri (`mufredat26_v7` vb.)
-yerinde duruyor; yalnızca menüde görünmüyor.
+Raporun kopyası olan **Ölçütler/kanıt dizini** menüden kaldırıldı.
+
+## Öğretim planı
+
+- Başlangıç değeri **Ders Kataloğu 27.07.2026** (2026 KATALOG sekmesi). Toplam 124 AKTS; yarıyıllar 32 + 30 + 32 + 30.
+- Ders–PÇ matrisi ÖDR'deki katkı düzeyleriyle başlar. Değişen kodlar eşlendi: SETP108 → SETP241 (İhracat Teknikleri, artık mesleki alan seçmelisi) ve SOS210 → SOZ210 (İş Yeri Eğitimi).
+- Derslere dört etiket konabilir: Mesleki, PÇ11–14, Dış paydaş, İME. MEDEK şartları bu etiketlerden hesaplanır.
+
+## Öğrenciler ve paydaşlar
+
+Panele yetkisi olmayan herkes Google ile giriş yaptıktan sonra **Öğrenci ve Paydaş
+Sayfası**'nı görür. Sayfada üç bölüm var:
+
+1. Güncel öğretim planı (ve arşivdeki önceki planlar)
+2. Program hakkında (misyon, vizyon, PEA, PÇ)
+3. Görüş bildirme formu
+
+Giriş yapmadan hiçbir şey görünmez. Yönetici planda veya program kimliğinde değişiklik
+yapıp kaydettiğinde öğrenci sayfası kendiliğinden güncellenir.
 
 ## Yayına alma
 
-1. `index.html`'i Netlify'a yükleyin. eticvepazarlama sitesinde **Deploys → "Drag and drop"**, ya da bu depo Netlify'a bağlıysa `main` dalına birleştirin.
-2. Paydaş Portalı'nın görüş kaydedebilmesi için `FIRESTORE_KURALLARI.md`'deki kuralı ekleyin. Tek seferlik, yaklaşık 2 dakika sürer.
+1. `index.html`'i Netlify'a yükleyin.
+2. `FIRESTORE_KURALLARI.md`'deki kuralları Firebase'e ekleyin. Öğrenci sayfası ve görüş formu bu kurallara bağlıdır.
+3. Panele yönetici olarak bir kez girin. Plan ve program kimliği öğrenci sayfasına o anda yayımlanır.
+
+## Veri
+
+Eski veriler silinmedi. Yeni alanlar:
+
+| Alan | Ne tutar |
+|---|---|
+| `ogretimPlani_v1` | Güncel öğretim planı |
+| `ogretimPlaniArsiv_v1` | Önceki planlar |
+| `programKimligi_v1` | Program kimliği |
+| `programKimligiArsiv_v1` | Program kimliğinin önceki sürümleri |
+| `apgSonuclari_v1` | APG sonuçları |
+| `pcUlasma_v1` | PÇ ulaşma |
+| `iyilestirmeDongusu_v1` | İyileştirme döngüsü |
+| `takvimDurum_v1` | İş takvimi durumu |
+| `yillikRaporMetinleri_v1` | Yıllık rapor metinleri |
+| `kurumZiyaretiTarihi` | Kurum ziyareti tarihi |
+
+Bunlara ek olarak yeni bir doküman (`public/program`) ve yeni bir koleksiyon (`gorusKutusu`) var.
 
 ## Geliştirme
 
-Kaynaklar `src/` klasöründe. `index.html` bunlardan üretilir:
+`python3 build.py` komutu `src/` klasöründen `index.html`'i üretir:
 
-```
-npm install
-python3 build.py
-```
-
-- `src/odr-veri.js` — ÖDR tablolarından üretilen veriler (PÇ, PEA, APG, öğretim planı, Ders–PÇ, 187 kanıt).
-- `src/moduller.jsx` — yeni sekmeler ve Paydaş Portalı.
-- `src/app.js` — panelin ana uygulaması (canlı sürümden alındı; menü ve yönlendirme güncellendi).
-- `src/shell.html` — HTML iskeleti (Firebase ayarları, CDN'ler).
+| Dosya | İçerik |
+|---|---|
+| `src/katalog-2026.js` | Katalogdan üretilen başlangıç planı (`src/build_katalog.py <excel>`) |
+| `src/odr-veri.js` | PEA, PÇ ve APG başlangıç tanımları, ÖDR Ders–PÇ katkı düzeyleri |
+| `src/moduller.jsx` | Yönetim paneli modülleri ve öğrenci sayfası |
+| `src/app.js` | Panelin ana uygulaması |
+| `src/shell.html` | HTML iskeleti |
