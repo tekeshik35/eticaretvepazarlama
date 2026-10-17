@@ -8681,12 +8681,8 @@ function AppKapsayici() {
       ),
     );
   } // Yetkisi yok
+  // Yalnızca yöneticinin rol verdiği hesaplar (yönetici / görüntüleyici) paneli görür.
   if (!yetkiVar) {
-    // Panel yetkisi olmayan oturum açmış kullanıcılar (öğrenci, mezun, sektör temsilcisi)
-    // Paydaş Portalı'nı görür: program kimliği + görüş bildirme (ÖDR 1.11, 2.7, 4.2).
-    return React.createElement(PaydasPortali, { kullanici: user, cikisYap });
-  }
-  if (false) {
     return /*#__PURE__*/ React.createElement(
       "div",
       {
