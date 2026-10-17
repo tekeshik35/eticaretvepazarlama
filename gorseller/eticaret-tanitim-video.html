@@ -87,6 +87,9 @@ svg{position:absolute}
   <div class="url" style="margin-top:40px">sbmyopazarlama.gaziantep.edu.tr &nbsp;·&nbsp; 2026–2027</div>
  </div></div>
 
+<div id="ipucu" style="position:absolute;left:70px;top:440px;display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.1);border:2px solid #FFCB05;border-radius:40px;padding:10px 24px 10px 12px;opacity:0">
+ <span style="width:40px;height:40px;border-radius:50%;background:#FFCB05;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="18" viewBox="0 0 16 18" style="position:static;margin-left:3px"><path d="M0 0L16 9L0 18Z" fill="#002B64"/></svg></span>
+ <span style="font-weight:700;font-size:24px">Videoyu izlemek için oynat (▶) tuşuna basınız</span></div>
 <script>
 const D=20, F=0.5;
 const S=[['s1',0,4.1],['s2',4,8.1],['s3',8,12.1],['s4',12,14.6],['s5',14.5,17.1],['s6',17,20.2]];
@@ -96,7 +99,7 @@ function render(t){
  for(const [id,a,b] of S){let o=e((t-a)/F)*(1-e((t-(b-F))/F)); if(id==='s1'&&t<F)o=1; if(id==='s6'&&t>b-F)o=1; $(id).style.opacity=o; $(id).style.visibility=o>0.001?'visible':'hidden';}
  // döngü: son 0.5 sn s6 -> s1
  if(t>D-F){const k=e((t-(D-F))/F);$('s6').style.opacity=1-k;$('s1').style.opacity=k;$('s1').style.visibility='visible';}
- const t1=t>D-F?0:t;
+ const t1=3;
  $('s1y').style.opacity=e(t1/0.6);$('s1u').style.transform=`translateY(${(1-e(t1/0.6))*14}px)`;
  $('s1b').style.transform=`translateY(${(1-e((t1-0.15)/0.7))*24}px)`; $('s1b').style.opacity=e((t1-0.1)/0.6);
  $('s1bar').style.width=(220*e((t1-0.5)/1))+'px';
@@ -107,5 +110,5 @@ function render(t){
  $('f1').style.transform=`scale(${1.04+0.06*cl((t-12)/2.6)})`;
  $('f2').style.transform=`scale(${1.10-0.06*cl((t-14.5)/2.6)})`;
 }
-window.render=render; render(0);
+window.hint=o=>{document.getElementById('ipucu').style.opacity=o};window.render=render; render(0);
 </script></body></html>
