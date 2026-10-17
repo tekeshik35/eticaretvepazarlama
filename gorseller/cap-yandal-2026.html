@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1200px;height:675px;font-family:"DejaVu Sans",Arial,sans-serif;background:#f7f5f0;color:#1d2a44;position:relative;overflow:hidden}
+.ust{position:absolute;left:56px;top:44px}
+.kurum{font-size:17px;letter-spacing:1.5px;color:#9b1c1c;font-weight:700}
+h1{font-size:44px;line-height:1.1;margin-top:12px;font-weight:800}
+h1 span{color:#9b1c1c}
+.alt{font-size:19px;margin-top:14px;color:#3d4a63;max-width:430px;line-height:1.45}
+.etiket{position:absolute;left:56px;bottom:46px;display:flex;gap:14px}
+.e{background:#fff;border:2px solid #1d2a44;border-radius:10px;padding:12px 16px;font-size:15px;line-height:1.35;width:205px}
+.e b{display:block;font-size:19px;color:#9b1c1c;margin-bottom:3px}
+.not{position:absolute;left:56px;bottom:16px;font-size:13px;color:#5c667a}
+svg{position:absolute;right:20px;top:18px}
+</style></head><body>
+<div class="ust">
+ <div class="kurum">GAZİANTEP ÜNİVERSİTESİ · SBMYO</div>
+ <h1>Çift Ana Dal ve<br><span>Yan Dal</span> Olanağı</h1>
+ <p class="alt">E-Ticaret ve Pazarlama Programı öğrencileri, Yüksekokulumuzdaki yedi programda çift ana dal veya yan dal yapabilecek.</p>
+</div>
+<div class="etiket">
+ <div class="e"><b>Yan Dal</b>Başka bir programdan seçili derslerle ikinci bir alanda bilgi edin.</div>
+ <div class="e"><b>Çift Ana Dal</b>İkinci bir programın ders planındaki dersleri tamamla.</div>
+</div>
+<div class="not">Ders listeleri ve uygulama esasları bölüm web sayfasında · Başvuru tarihleri ilgili birimlerce duyurulacaktır.</div>
+<svg width="640" height="640" viewBox="0 0 640 640" font-family="DejaVu Sans, Arial">
+ <g id="hat" stroke="#c9b9a6" stroke-width="3" stroke-dasharray="7 7"></g>
+ <circle cx="320" cy="320" r="112" fill="#9b1c1c"/>
+ <text x="320" y="305" fill="#fff" font-size="23" font-weight="700" text-anchor="middle">E-Ticaret ve</text>
+ <text x="320" y="335" fill="#fff" font-size="23" font-weight="700" text-anchor="middle">Pazarlama</text>
+ <text x="320" y="362" fill="#f3d9d9" font-size="15" text-anchor="middle">Programı</text>
+ <g id="dugum"></g>
+</svg>
+<script>
+const P=[["İşletme","Yönetimi"],["Lojistik"],["Dış","Ticaret"],["Muhasebe ve","Vergi Uyg."],["Bankacılık ve","Sigortacılık"],["Büro Yönetimi ve","Yön. Asistanlığı"],["Çağrı Merkezi","Hizmetleri"]];
+const ns="http://www.w3.org/2000/svg",cx=320,cy=320,R=232,r=74;
+const hat=document.getElementById('hat'),dg=document.getElementById('dugum');
+P.forEach((p,i)=>{const a=-Math.PI/2+i*2*Math.PI/P.length;const x=cx+R*Math.cos(a),y=cy+R*Math.sin(a);
+ const l=document.createElementNS(ns,'line');l.setAttribute('x1',cx);l.setAttribute('y1',cy);l.setAttribute('x2',x);l.setAttribute('y2',y);hat.appendChild(l);
+ const c=document.createElementNS(ns,'circle');c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r',r);c.setAttribute('fill','#fff');c.setAttribute('stroke','#1d2a44');c.setAttribute('stroke-width','3');dg.appendChild(c);
+ p.forEach((s,j)=>{const t=document.createElementNS(ns,'text');t.setAttribute('x',x);t.setAttribute('y',y+(j-(p.length-1)/2)*20+6);t.setAttribute('text-anchor','middle');t.setAttribute('font-size',s.length>13?'14':'16');t.setAttribute('font-weight','700');t.setAttribute('fill','#1d2a44');t.textContent=s;dg.appendChild(t)});
+});
+</script></body></html>
