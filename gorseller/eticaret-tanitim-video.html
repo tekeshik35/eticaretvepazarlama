@@ -34,7 +34,8 @@ svg{position:absolute}
  <svg id="sepet" width="230" height="200" viewBox="0 0 230 200" style="right:110px;bottom:70px">
   <path d="M10 30 H50 L80 140 H190 L215 60 H62" fill="none" stroke="#F58220" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>
   <circle cx="95" cy="175" r="14" fill="#F58220"/><circle cx="175" cy="175" r="14" fill="#F58220"/></svg>
- <div style="position:absolute;left:70px;top:150px">
+ <div style="position:absolute;left:70px;top:118px">
+  <div id="s1y" style="display:inline-block;border:2px solid #FFCB05;color:#FFCB05;border-radius:6px;padding:5px 14px;font-weight:700;font-size:20px;letter-spacing:1px;margin-bottom:18px">2026–2027 Eğitim-Öğretim Yılı</div>
   <div class="ust" id="s1u">GAZİANTEP ÜNİVERSİTESİ · SOSYAL BİLİMLER MYO</div>
   <div class="b1" id="s1b" style="margin-top:22px">E-Ticaret ve<br>Pazarlama Programı</div>
   <div class="bar" id="s1bar" style="margin-top:26px;width:0"></div>
@@ -83,7 +84,7 @@ svg{position:absolute}
  <div style="position:absolute;left:0;right:0;top:120px;text-align:center">
   <div class="b1" style="font-size:58px">Çift Ana Dal ve<br><span class="sari">Yan Dal</span> olanağı</div>
   <div style="margin-top:34px"><span class="medek"><i></i>MEDEK Akreditasyonu</span></div>
-  <div class="url" style="margin-top:40px">sbmyopazarlama.gaziantep.edu.tr</div>
+  <div class="url" style="margin-top:40px">sbmyopazarlama.gaziantep.edu.tr &nbsp;·&nbsp; 2026–2027</div>
  </div></div>
 
 <script>
@@ -96,7 +97,7 @@ function render(t){
  // döngü: son 0.5 sn s6 -> s1
  if(t>D-F){const k=e((t-(D-F))/F);$('s6').style.opacity=1-k;$('s1').style.opacity=k;$('s1').style.visibility='visible';}
  const t1=t>D-F?0:t;
- $('s1u').style.transform=`translateY(${(1-e(t1/0.6))*14}px)`;
+ $('s1y').style.opacity=e(t1/0.6);$('s1u').style.transform=`translateY(${(1-e(t1/0.6))*14}px)`;
  $('s1b').style.transform=`translateY(${(1-e((t1-0.15)/0.7))*24}px)`; $('s1b').style.opacity=e((t1-0.1)/0.6);
  $('s1bar').style.width=(220*e((t1-0.5)/1))+'px';
  $('sepet').querySelector('path').style.strokeDasharray='1'; $('sepet').querySelector('path').style.strokeDashoffset=1-e((t1-0.3)/1.6);
